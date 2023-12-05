@@ -3,11 +3,13 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
-url_base = 'https://casadosdados.com.br'
+url_base = 'site.com'
 url_pesquisa = f'{url_base}/solucao/cnpj'
 headers = {'User-Agent': 'SeuAgenteDeUsuario'}
 entrada = input("Entrada da pesquisa: ")
-payload = {'q': entrada, 'uf': 'PR', 'municipio': 'APUCARANA'}
+entradaUF = input("Estado em siglas: ")
+entradaMunicipio = input("Municipio:  ")
+payload = {'q':entrada, 'uf':entradaUF, municipio:entradaMunicipio }
 
 def extrair_links_detalhes(url_pesquisa, headers, payload):
     try:
