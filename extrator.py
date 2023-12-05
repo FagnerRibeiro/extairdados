@@ -131,7 +131,7 @@ with open(nome_arquivo, 'a') as arquivo_json:
     # Redefinir a saída padrão para o arquivo
     sys.stdout = arquivo_json
 
-    # Segunda chamada da função
+    # Chamada da função mágica 
     extrair_links_detalhes(url_pesquisa, headers, payload)
 
 # Restaurar a saída padrão
